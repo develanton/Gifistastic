@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Develanton</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+</head>
+
+<body style="background-color: black">
+    <section class="section">
+        <div class="box">
+            <nav class="navbar is-transparent">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                        <div id="linking">
+                            <a href="index.html">develanton</a>
+                        </div>
+                    </a>
+                    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div id="navbarExampleTransparentExample" class="navbar-menu">
+                    <div class="navbar-start">
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="portfolio.html" target="_blank">
+                                Portfolio
+
+                                <div class="navbar-dropdown is-boxed">
+                                    <a class="navbar-item" href="https://develanton.github.io/Basic-Portfolio/">
+                                        API & AJAX
+                                    </a>
+                                    <a class="navbar-item" href="trivia.html">
+                                        Triva Game
+                                    </a>
+                                    <a class="navbar-item" href="https://develanton.github.io/crystal-game/">
+                                        Crystal Game
+                                    </a>
+                                    <a class="navbar-item" href="https://develanton.github.io/Word-Guess-Game/">
+                                        Hangman
+                                    </a>
+                                    <a class="navbar-item" href="https://develanton.github.io/Bootstrap-Portfolio">
+                                        Bootstrap
+                                    </a>
+
+                                    <a class="navbar-item" href="https://develanton.github.io/Bootstrap-Portfolio">
+                                        Responsive CSS
+                                    </a>
+                                    <a class="navbar-item is-active" href="https://develanton.github.io/index.html">
+                                        HTML & CSS
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="field is-grouped">
+                                <p class="control">
+                                    <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000"
+                                        target="_blank" href="https://github.com/develanton">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>
+                                            Github
+                                        </span>
+                                    </a>
+                                    <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000"
+                                        target="_blank" href="#">
+                                        <span class="icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <span>
+                                            Contact
+                                        </span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: black;">
+        <div class="box">
+            <div class="field has-addons">
+                <div class="control is-expanded">
+                    <input id="search" class="input" type="text" placeholder="Search Gifs">
+                </div>
+                <div class="control">
+                    <a class="button is-success">
+                        <strong> Search</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="box">
+            <div id="butts"></div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div id="linking">
+            <a href="index.html">develanton</a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            var baseGifs = ["Star Wars", "Lord of the Rings", "Harry Potter", "Back to the Future"];
+            var butts = $("#butts");
+
+
+            baseGifs.forEach(baseGifs => {
+                butts.append("<a class='button' id='butts'>"+ baseGifs +"</a>");
+            });
+           
+
+
+
+
+            console.log("it's alive!");
+
+
+
+
+
+        })
+
+    </script>
+
+
+
+
+</body>
+
+
+
+</html>
