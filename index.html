@@ -9,7 +9,6 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <script src="assets/javascript/app.js"></script>
 </head>
 
 <body style="background-color: black">
@@ -99,21 +98,26 @@
             <div class="field has-addons">
                 <div class="control is-expanded">
                     <form>
-                        <input id="search" class="input" type="text" placeholder="Search Gifs">
+                        <input id="search" class="input is-primary" type="text"  placeholder="Search Gifs">
                 </div>
                 <div class="control">
-                    <button type="sumit" class="button is-success" id="searchButt">
+                    <button type="summit" class="button is-success" id="searchButt" value="">
                         <strong> Search</strong>
-                    </button>
-                    </form>
+                        </a>
+                        </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="section" >
+        <div class="box" style="padding:5px;">
+            <div id="butts" ></div>
+        </div>
+    </section>
     <section class="section">
         <div class="box">
-            <div id="butts"></div>
+            <div id=gifDisplay></div>
         </div>
     </section>
 
@@ -125,52 +129,8 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script>
-        $(document).ready(function () {
-
-
-            var baseGifs = ["Star Wars", "Lord of the Rings", "Harry Potter", "Back to the Future"];
-            var butts = $("#butts");
-            var search = $("#search");
-            var term = "on click val";
-            var apiKey = "https://api.giphy.com/v1/gifs/search?api_key=aOBNvDAUoSCFk4afN29oBolqLxw9lcaC&q="+term+"&limit=10&offset=0&rating=R&lang=en"
-
-        
-
-
-            baseGifs.forEach(baseGifs => {
-                butts.append("<button class='button' id='butts'>" + baseGifs + "</a>");
-            });
-
-
-            $("document").on("click", "#searchButt", function (event) {
-               
-                event.preventDefault();
-                var userInput = search.val().trim(); 
-                
-            })
-
-
-
-
-
-
-
-            console.log("it's alive!");
-
-
-
-
-
-        })
-
-    </script>
-
-
- -->
+    <script src="assets/javascript/app.js"></script>
 
 </body>
-
-
 
 </html>
