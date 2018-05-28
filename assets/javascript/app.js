@@ -42,36 +42,53 @@ $(document).ready(function () {
         $.ajax({
             url: queryURL,
             method: "GET"
-        }).then(function (response) {
+        }).then(function(response) {
 
             var result = response.data;
-            //console.log(result);
+            console.log(result);
 
             //looping through the API's results        
-            for (let i = 0; i < result.length; i++) {
+            for (let i = 0; i < 10; i++) {
 
                 count++;
 
                 var ratings = ("Rating:" + result[i].rating);
-
                 var divers = $("#gifDisplay").append("<div><strong>Rating: </strong>" + result[i].rating + "</div>");
+                var img = $("<img>")
 
-                var imgs = ("<img src=" + result[i].images.fixed_width_still.url + " data="+ count+">");
+                img.attr("src", result[i].images.fixed_width.url);
+                img.attr("data-still", result[i].images.fixed_width_still.url);
+                img.attr("data-animate", result[i].images.fixed_width.url);
+                img.attr("data-state", "animate");
+                img.attr("class", "gif");
+                img.attr("num", count);
 
-                divers.append(imgs);
+                divers.append(img);
 
 
 
             };
 
-            $(document.body).on("click", "img", function (event) {
+            $(document.body).unbind().on("click",".gif", function () {
 
-                     
-                    $(this).attr("src", result[0].images.fixed_width.url );
+                console.log(this);
+             
 
-                    console.log(this);
-                 
-                
+                var state = $(this).attr("data-state");
+             
+                if (state === "animate") {
+                    $(this).attr("src", $(this).attr("data-still"));
+                    $(this).attr("data-state", "still");
+
+                } else {
+                    $(this).attr("src", $(this).attr("data-animate"));
+                    $(this).attr("data-state", "animate");
+                }
+
+
+                console.log(this);
+                console.log(state);
+
 
             })
 
