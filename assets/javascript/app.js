@@ -4,12 +4,6 @@ $(document).ready(function () {
 //Toggle responsive burger functionality
         
 
-
-
-
-
-
-
     // Global variables 
     var baseGifs = ["Star Wars", "Lord of the Rings", "Harry Potter", "Back to the Future"];
     var butts = $("#butts");
@@ -40,7 +34,7 @@ $(document).ready(function () {
 
 
     // clicking on the topic buttons to call the API's data to display content
-    $(document.body).on("click", "#butts", function (event) {
+    $("#butts").on("click", function (event) {
 
         var term = event.target.innerText;
         var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=aOBNvDAUoSCFk4afN29oBolqLxw9lcaC&q=" + term + "&limit=10&offset=0&rating=R&lang=en"
